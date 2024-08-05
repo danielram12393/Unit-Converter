@@ -16,19 +16,27 @@ public class UnitConverter extends JFrame implements ActionListener {
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        panel = new JPanel();
-        panel.setPreferredSize(new Dimension(700,500));
+        mainPanelConfig();
 
-        convert = new JButton("Convert");
-        convert.setFont(TMRFont);
-        convert.addActionListener(this);
-        convert.setFocusable(false);
+        conversionButtonConfig();
 
         panel.add(convert);
 
         add(panel);
         setVisible(true);
         pack();
+    }
+
+    private void mainPanelConfig() {
+        panel = new JPanel();
+        panel.setPreferredSize(new Dimension(700,500));
+    }
+
+    private void conversionButtonConfig() {
+        convert = new JButton("Convert");
+        convert.setFont(TMRFont);
+        convert.addActionListener(this);
+        convert.setFocusable(false);
     }
 
     @Override
